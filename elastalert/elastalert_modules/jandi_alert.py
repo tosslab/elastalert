@@ -23,7 +23,7 @@ class JandiAlerter(Alerter):
         return body
 
     def alert(self, matches):
-        title = u'⚠ %s ⚠ ' % (self.create_title(matches))
+        title = u'@ %s @' % (self.create_title(matches))
         body = self.create_alert_body(matches)
         body = self.format_body(body)
         # post to jandi
